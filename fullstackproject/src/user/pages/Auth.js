@@ -102,7 +102,7 @@ const Auth = () => {
         formData.append('image', formState.inputs.image.value);
         console.log(formData);
 
-        const response = await fetch('http://localhost:5000/api/users/signup', {
+        const response = await fetch('https://travelsharewebsite.onrender.com/api/users/signup', {
           method: 'POST',
           body: formData
           
