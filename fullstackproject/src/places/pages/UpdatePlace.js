@@ -34,7 +34,7 @@ const UpdatePlace = (Props) => {
     useEffect(() => {
         const fetchPlace = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/places/${placeId}`);
+                const response = await fetch(`https://travelsharewebsite.onrender.com/api/places/${placeId}`);
                 const responseData = await response.json();
                 if (!response.ok) {
                     throw new Error(responseData.message);
@@ -61,7 +61,7 @@ const UpdatePlace = (Props) => {
     const placeUpdateSubmitHandler =async (event) => {
         event.preventDefault();
         try{
-            const response=await fetch(`http://localhost:5000/api/places/${placeId}`,{
+            const response=await fetch(`https://travelsharewebsite.onrender.com/api/places/${placeId}`,{
                 method:'PATCH',
                 headers:{
                     'Content-Type':'application/json'
