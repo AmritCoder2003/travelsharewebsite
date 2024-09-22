@@ -28,7 +28,7 @@ const PlaceItem = props => {
     setShowConfirmModal(false);
     setIsLoading(true);
     try{
-      const response = await fetch(`http://localhost:5000/api/places/${props.id}`, {
+      const response = await fetch(`https://travelsharewebsite.onrender.com/api/places/${props.id}`, {
         method: 'DELETE'
       });   
       const responseData = await response.json();
